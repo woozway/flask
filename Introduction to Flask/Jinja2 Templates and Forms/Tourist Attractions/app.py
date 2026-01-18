@@ -3,10 +3,14 @@ from locations import Locations
 from forms import AddLocationForm
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'SECRET_PROJECT'
+app.config["SECRET_KEY"] = "SECRET_PROJECT"
 
 visit = Locations()
-categories = {"recommended": "Recommended", "tovisit": "Places To Go", "visited": "Visited!!!", }
+categories = {
+    "recommended": "Recommended",
+    "tovisit": "Places To Go",
+    "visited": "Visited!!!",
+}
 
 UP_ACTION = "\u2197"
 DEL_ACTION = "X"
@@ -24,7 +28,13 @@ def locations(category):
         elif action == DEL_ACTION:
             visit.delete(name)
     ## Return the main template with variables
-    return render_template("locations.html", category=category, categories=categories, locations=locations, add_location=AddLocationForm())
+    return render_template(
+        "locations.html",
+        category=category,
+        categories=categories,
+        locations=locations,
+        add_location=AddLocationForm(),
+    )
 
 
 @app.route("/add_location", methods=["POST"])
@@ -38,10 +48,14 @@ def add_location():
         visit.add(name, description, category)
 
     ## Redirect to locations route function
-    return redirect(url_for("locations", category=category, _external=True, _scheme="https"))
+    return redirect(
+        url_for("locations", category=category, _external=True, _scheme="https")
+    )
 
 
 @app.route("/")
 def index():
     ## Redirect to locations route function
-    return redirect(url_for("locations", category="recommended", _external=True, _scheme="https"))
+    return redirect(
+        url_for("locations", category="recommended", _external=True, _scheme="https")
+    )

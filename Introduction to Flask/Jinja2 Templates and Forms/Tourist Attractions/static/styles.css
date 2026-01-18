@@ -18,14 +18,19 @@ a:hover {
   background-color: darkgrey;
 }
 
-.location { grid-area: loc;}
-.description { grid-area: desc; }
-.loc-form { grid-area: frm; }
+.location {
+  grid-area: loc;
+}
+.description {
+  grid-area: desc;
+}
+.loc-form {
+  grid-area: frm;
+}
 
 .loc-container {
   display: grid;
-  grid-template-areas: 
-    'loc loc  loc desc desc desc desc desc frm';
+  grid-template-areas: "loc loc  loc desc desc desc desc desc frm";
   column-gap: 5px;
   background-color: lightslategray;
   padding: 5px;

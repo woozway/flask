@@ -1,5 +1,6 @@
 import csv
 
+
 class Locations:
     def __init__(self):
         self.locations = []
@@ -41,7 +42,7 @@ class Locations:
 
     def __repr__(self):
         for location in self.locations:
-            print(f'{location.name} - {location.description} - {location.category}')
+            print(f"{location.name} - {location.description} - {location.category}")
 
 
 class Location:
