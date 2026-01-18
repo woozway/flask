@@ -4,6 +4,7 @@ from helper import pets
 
 app = Flask(__name__)
 
+
 @app.route('/')
 def index():
     return '''
@@ -16,6 +17,7 @@ def index():
       </ul>
     '''
 
+
 @app.route('/animals/<pet_type>')
 def animals(pet_type):
     html = f'<h1>List of {pet_type}</h1>'
@@ -25,6 +27,7 @@ def animals(pet_type):
                 html += f'<li><a href="/animals/{pet_type}/{i}">{pet["name"]}</a></li>'
             break
     return '<ul>' + html + '</ul>'
+
 
 @app.route('/animals/<pet_type>/<int:pet_id>')
 def pet(pet_type, pet_id):
