@@ -1,19 +1,19 @@
-import React from 'react';
+import React from "react";
 
 const Hero = ({ image, displayText }) => {
-  const type = ''
+  const type = "";
 
   return (
     <div
       className="hero-container"
       style={{
         backgroundImage: `linear-gradient(black, black), url("${
-          image || 'pets-hero.png'
+          image || "pets-hero.png"
         }")
           `,
-        backgroundBlendMode: 'saturation',
-        backgroundSize: 'cover',
-        backgroundColor: '#0000008f'
+        backgroundBlendMode: "saturation",
+        backgroundSize: "cover",
+        backgroundColor: "#0000008f",
       }}
     >
       <h2>{displayText || getHeroTitle(type)}</h2>
@@ -25,15 +25,15 @@ export default Hero;
 
 const getHeroTitle = (type) => {
   switch (type) {
-    case 'dog':
-      return 'Dogs';
-    case 'cat':
-      return 'Cats';
-    case 'rabbit':
-      return 'Rabbits';
-    case 'bird':
-      return 'Birds';
+    case "dog":
+      return "Dogs";
+    case "cat":
+      return "Cats";
+    case "rabbit":
+      return "Rabbits";
+    case "bird":
+      return "Birds";
     default:
-      return 'Find your perfect pet';
+      return "Find your perfect pet";
   }
 };

@@ -1,12 +1,12 @@
-import React from 'react';
-import Navigation from '../navigation';
+import React from "react";
+import Navigation from "../navigation";
 // import Outlet
-import { Outlet } from 'react-router-dom';
+import { Outlet } from "react-router-dom";
 
 const Root = () => {
   return (
     <>
-      <Navigation/>
+      <Navigation />
       <Outlet />
     </>
   );

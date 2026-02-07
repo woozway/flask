@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const Pet = ({ animal }) => {
   return (
@@ -13,7 +13,7 @@ const Pet = ({ animal }) => {
             <img
               className="pet-image"
               src={
-                animal.photos[0]?.medium || 'https://i.imgur.com/aEcJUFK.png'
+                animal.photos[0]?.medium || "https://i.imgur.com/aEcJUFK.png"
               }
               alt=""
             />
